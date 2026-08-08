@@ -1,0 +1,45 @@
+generated: '2026-08-06'
+method: searched
+source: https://status.auditoria.ai/
+scope: >-
+  Auditoria publishes no public API, so there is no API version, no Sunset/Deprecation
+  header practice and no deprecated-operation list to derive. What follows is the
+  application lifecycle the company does publish.
+versioning:
+  scheme: calendar-release (YY.M.N)
+  current: 26.7.2
+  current_date: '2026-07-27'
+  docs: https://docs.auditoria.ai/hc/en-us/categories/360005816333-Auditoria-AI-Release-Notes
+  api_versioning: none
+  api_versioning_note: no public API surface exists to version
+deprecation:
+  policy_url: null
+  sunset_header: false
+  found: false
+  note: >-
+    No deprecation or sunset policy is published on the site or in the help center. Feature
+    replacements are announced inside individual release notes (for example 26.7.2 replacing
+    SmartFlow Skills Management with the Agent Co-workers wizard) but there is no standing policy.
+sla:
+  url: null
+  uptime_target: null
+  found: false
+  note: SLA terms are contractual; nothing public was found.
+status_page: https://status.auditoria.ai/
+status_page_details:
+  provider: Atlassian Statuspage
+  page_id: 8xgfyqmcjrsd
+  api: https://status.auditoria.ai/api/v2/summary.json
+  components:
+    - AAI Application
+  component_count: 1
+  note: >-
+    A single coarse component ("AAI Application") covers the whole platform; individual
+    products and ERP connectors are not broken out.
+deprecated_operations: []
+x-evidence:
+  fetched: '2026-08-06'
+  probes:
+    - {url: 'https://status.auditoria.ai/', status: 200}
+    - {url: 'https://status.auditoria.ai/api/v2/summary.json', status: 200}
+    - {url: 'https://www.auditoria.ai/security/', status: 404}

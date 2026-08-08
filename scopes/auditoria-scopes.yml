@@ -1,0 +1,45 @@
+generated: '2026-08-06'
+method: probed
+source: https://auth.auditoria.ai/.well-known/openid-configuration
+scope_note: >-
+  These are the scopes the Auditoria Auth0 tenant advertises for signing in to the customer
+  application. They are the standard OpenID Connect identity/claim scopes - Auditoria
+  publishes no public API and therefore no resource-permission scope surface. There is no
+  scopes reference page in the documentation; nothing here was authored by API Evangelist.
+schemes:
+  - name: Auth0OIDC
+    source: well-known/auditoria-openid-configuration.json
+    issuer: https://auth.auditoria.ai/
+    flows:
+      - flow: authorizationCode
+        authorizationUrl: https://auth.auditoria.ai/authorize
+        tokenUrl: https://auth.auditoria.ai/oauth/token
+      - flow: clientCredentials
+        tokenUrl: https://auth.auditoria.ai/oauth/token
+      - flow: deviceCode
+        deviceAuthorizationUrl: https://auth.auditoria.ai/oauth/device/code
+        tokenUrl: https://auth.auditoria.ai/oauth/token
+      - flow: implicit
+        authorizationUrl: https://auth.auditoria.ai/authorize
+      - flow: refreshToken
+        tokenUrl: https://auth.auditoria.ai/oauth/token
+scopes:
+  - {scope: openid, description: 'Request an OpenID Connect ID token', kind: oidc-standard}
+  - {scope: profile, description: 'Basic profile claims', kind: oidc-standard}
+  - {scope: offline_access, description: 'Issue a refresh token', kind: oidc-standard}
+  - {scope: name, description: 'Full name claim', kind: oidc-claim}
+  - {scope: given_name, description: 'Given name claim', kind: oidc-claim}
+  - {scope: family_name, description: 'Family name claim', kind: oidc-claim}
+  - {scope: nickname, description: 'Nickname claim', kind: oidc-claim}
+  - {scope: email, description: 'Email address claim', kind: oidc-claim}
+  - {scope: email_verified, description: 'Email verification status claim', kind: oidc-claim}
+  - {scope: picture, description: 'Profile picture claim', kind: oidc-claim}
+  - {scope: created_at, description: 'Account creation timestamp claim', kind: oidc-claim}
+  - {scope: identities, description: 'Linked identity-provider identities claim', kind: auth0-extension}
+  - {scope: phone, description: 'Phone number claim', kind: oidc-standard}
+  - {scope: address, description: 'Address claim', kind: oidc-standard}
+resource_scopes: []
+x-evidence:
+  fetched: '2026-08-06'
+  url: https://auth.auditoria.ai/.well-known/openid-configuration
+  http_status: 200

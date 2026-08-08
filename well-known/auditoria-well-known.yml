@@ -1,0 +1,82 @@
+generated: '2026-08-06'
+method: probed
+source: https://auth.auditoria.ai/.well-known/openid-configuration
+summary: >-
+  Auditoria publishes no public API host and no developer-facing well-known surface. The
+  only anonymously readable machine-readable discovery document on any Auditoria host is
+  the OpenID Connect / OAuth 2.0 authorization-server metadata served by the Auth0 tenant
+  behind auth.auditoria.ai, which fronts the customer application at app.auditoria.ai.
+  app.auditoria.ai is a single-page app whose catch-all returns HTTP 200 with an identical
+  1,134-byte HTML shell for every /.well-known/* path probed, so none of its 200s are
+  discovery documents; they are recorded here as false positives so a later run does not
+  re-credit them.
+hosts:
+  - host: https://auth.auditoria.ai
+    role: identity provider (Auth0 tenant)
+    documents:
+      - path: /.well-known/openid-configuration
+        status: 200
+        content_type: application/json
+        file: auditoria-openid-configuration.json
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+        content_type: application/json
+        file: auditoria-oauth-authorization-server.json
+        note: byte-identical to the openid-configuration document
+      - path: /.well-known/jwks.json
+        status: 200
+        content_type: application/json
+        note: RSA signing keys; not saved to the repo (rotating key material)
+      - path: /.well-known/oauth-protected-resource
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/security.txt
+        status: 404
+  - host: https://www.auditoria.ai
+    role: marketing site (WordPress)
+    documents:
+      - path: /llms.txt
+        status: 200
+        content_type: text/plain
+        file: ../llms/auditoria-llms.txt
+        note: Yoast SEO-generated; control path /llms-zzz-control.txt returns 404, so this is a real document
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+  - host: https://app.auditoria.ai
+    role: customer application (SPA, login required)
+    spa_catch_all: true
+    documents:
+      - path: /.well-known/*
+        status: 200
+        content_type: text/html
+        note: >-
+          Every path returns the same 1,134-byte SPA HTML shell, including /openapi.json,
+          /swagger.json, /api-docs and every /.well-known/* probe. Rejected as a false
+          positive per the pipeline's SPA catch-all rule - no discovery document exists here.
+x-evidence:
+  checked: '2026-08-06'
+  probes:
+    - {url: 'https://auth.auditoria.ai/.well-known/openid-configuration', status: 200}
+    - {url: 'https://auth.auditoria.ai/.well-known/oauth-authorization-server', status: 200}
+    - {url: 'https://auth.auditoria.ai/.well-known/oauth-protected-resource', status: 404}
+    - {url: 'https://www.auditoria.ai/llms.txt', status: 200}
+    - {url: 'https://www.auditoria.ai/llms-zzz-control.txt', status: 404}
+    - {url: 'https://www.auditoria.ai/.well-known/security.txt', status: 404}
+    - {url: 'https://app.auditoria.ai/openapi.json', status: 200, rejected: 'text/html SPA shell'}
