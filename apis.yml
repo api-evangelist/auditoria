@@ -1,17 +1,39 @@
 aid: auditoria
-name: Auditoria
-description: 'Auditoria is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+name: Auditoria.AI
+description: >-
+  Auditoria.AI is a San Jose, California software company, founded in 2019, that builds
+  agentic AI "SmartBots" for the corporate finance back office. Its SmartVendor line
+  (AP Helpdesk, AP Invoices, AP Accruals) and SmartCustomer line (AR Helpdesk, AR
+  Collections, AR Remittances), together with SmartResearch and the Guardian data-protection
+  layer, automate vendor onboarding and management, invoice capture and validation, accruals,
+  collections, remittance application and audit readiness on top of a customer's existing ERP.
+  The platform runs a finance-domain small language model over structured ERP records and
+  unstructured invoices, remittances, emails and supplier documents, and executes work as
+  configurable SmartFlow Skills / Agent Co-workers with human-in-the-loop review. Auditoria
+  integrates into Workday, Oracle NetSuite, Oracle Fusion Cloud Financials, SAP, Sage Intacct,
+  Coupa and ServiceNow, with a template-driven Universal Connector over SFTP or Amazon S3 for
+  ERPs that have no native connector. Auditoria is an API consumer rather than an API provider -
+  it publishes no public developer API, SDK, webhook surface or developer portal.
+image: https://www.auditoria.ai/wp-content/uploads/www.auditoria.ai-featured-scaled.png
 url: https://raw.githubusercontent.com/api-evangelist/auditoria/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-06'
 modified: '2026-08-06'
 tags:
 - Company
+- Artificial Intelligence
+- Finance
+- Accounting
+- Accounts Payable
+- Accounts Receivable
+- Automation
+- ERP
+- Agents
+- SaaS
+- Invoicing
+- Procurement
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +41,79 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: TrustCenter
+  url: security/auditoria-trust-center.yml
+- type: DomainSecurity
+  url: security/auditoria-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.auditoria.ai/
+- type: Documentation
+  url: https://docs.auditoria.ai/hc/en-us
+- type: Support
+  url: https://www.auditoria.ai/contact-us/
+- type: Blog
+  url: https://blog.auditoria.ai/
+- type: BlogRSS
+  url: https://blog.auditoria.ai/rss.xml
+- type: GitHubOrganization
+  url: https://github.com/auditoria-ai
+- type: LinkedIn
+  url: https://www.linkedin.com/company/auditoriaai/
+- type: Login
+  url: https://app.auditoria.ai/
+- type: TermsOfService
+  url: https://www.auditoria.ai/terms-of-use/
+- type: PrivacyPolicy
+  url: https://www.auditoria.ai/privacy-policy/
+- type: Compliance
+  url: https://www.auditoria.ai/trust/
+- type: Security
+  url: https://www.auditoria.ai/trust/
+- type: VulnerabilityDisclosure
+  url: security/auditoria-vulnerability-disclosure.yml
+- type: StatusPage
+  url: https://status.auditoria.ai/
+- type: ChangeLog
+  url: https://docs.auditoria.ai/hc/en-us/categories/360005816333-Auditoria-AI-Release-Notes
+- type: ChangeLog
+  name: Auditoria release notes (captured)
+  url: changelog/auditoria-changelog.yml
+- type: Lifecycle
+  url: lifecycle/auditoria-lifecycle.yml
+- type: WellKnown
+  url: well-known/auditoria-well-known.yml
+- type: Authentication
+  url: authentication/auditoria-authentication.yml
+- type: OpenIDConnect
+  url: well-known/auditoria-openid-configuration.json
+- type: OAuthScopes
+  url: scopes/auditoria-scopes.yml
+- type: LLMsTxt
+  url: llms/auditoria-llms.txt
+- type: Conformance
+  url: conformance/auditoria-conformance.yml
+x-enrichment:
+  date: '2026-08-06'
+  status: minimal
+  artifacts_added: 12
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Auditoria is an API consumer, not an API provider - the only documented ways to move AP/AR
+    data in or out are a prebuilt ERP connector (Workday, NetSuite, Oracle Fusion, Sage Intacct,
+    Coupa) or the Universal Connector's CSV/JSON templates dropped on SFTP or an S3 bucket, and
+    a help-center search for "webhook" across all 44 integration articles returns zero results.
+  evidence:
+    - url: https://docs.auditoria.ai/hc/en-us/articles/60112878955289-Auditoria-Universal-Connector
+      status: 200
+    - url: https://www.auditoria.ai/openapi.json
+      status: 404
+    - url: https://docs.auditoria.ai/api/v2/help_center/articles/search.json?query=webhook
+      status: 200
+    - url: https://auth.auditoria.ai/.well-known/oauth-protected-resource
+      status: 404
+    - url: https://www.auditoria.ai/.well-known/agent-card.json
+      status: 404
+  checked: '2026-08-06'
