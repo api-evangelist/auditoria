@@ -2,6 +2,20 @@
   "repo": "auditoria",
   "feeds": [
     {
+      "source": "https://www.auditoria.ai/feed/",
+      "feed_url": "https://www.auditoria.ai/feed/",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
+      "source": "https://blog.auditoria.ai/rss.xml",
+      "feed_url": "https://blog.auditoria.ai/rss.xml",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
       "source": "https://www.auditoria.ai/contact-us/",
       "feed_url": "https://www.auditoria.ai/feed/",
       "title": "",
@@ -12,10 +26,10 @@
       "source": "https://blog.auditoria.ai/",
       "feed_url": "https://blog.auditoria.ai/rss.xml",
       "title": "",
-      "saved": 2,
+      "saved": 0,
       "method": "discovered"
     }
   ],
-  "post_count": 2,
-  "fetched": "2026-08-15T12:22:01Z"
+  "post_count": 20,
+  "fetched": "2026-08-22T20:20:02Z"
 }
