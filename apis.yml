@@ -14,6 +14,17 @@ description: >-
   Coupa and ServiceNow, with a template-driven Universal Connector over SFTP or Amazon S3 for
   ERPs that have no native connector. Auditoria is an API consumer rather than an API provider -
   it publishes no public developer API, SDK, webhook surface or developer portal.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://www.auditoria.ai/wp-content/uploads/www.auditoria.ai-featured-scaled.png
 url: https://raw.githubusercontent.com/api-evangelist/auditoria/refs/heads/main/apis.yml
 x-type: company
