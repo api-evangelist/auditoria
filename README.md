@@ -1,4 +1,4 @@
-# Auditoria
+# Auditoria.AI
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,5 +64,98 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Auditoria is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+Auditoria.AI is a San Jose, California software company, founded in 2019, that builds agentic AI "SmartBots" for the corporate finance back office. Its SmartVendor line (AP Helpdesk, AP Invoices, AP Accruals) and SmartCustomer line (AR Helpdesk, AR Collections, AR Remittances), together with SmartResearch and the Guardian data-protection layer, automate vendor onboarding and management, invoice capture and validation, accruals, collections, remittance application and audit readiness on top of a customer's existing ERP. The platform runs a finance-domain small language model over structured ERP records and unstructured invoices, remittances, emails and supplier documents, and executes work as configurable SmartFlow Skills / Agent Co-workers with human-in-the-loop review. Auditoria integrates into Workday, Oracle NetSuite, Oracle Fusion Cloud Financials, SAP, Sage Intacct, Coupa and ServiceNow, with a template-driven Universal Connector over SFTP or Amazon S3 for ERPs that have no native connector. Auditoria is an API consumer rather than an API provider - it publishes no public developer API, SDK, webhook surface or developer portal.
+
+**Areas:** Company · Artificial Intelligence · Finance · Accounting · Accounts Payable · Accounts Receivable · Automation · ERP · Agents · Software-as-a-Service · Invoicing · Procurement
+
+## Auditoria.AI on APIs.io
+
+Everything profiled for Auditoria.AI is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/auditoria/](https://apis.io/providers/auditoria/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Auditoria Authentication](https://apis.io/security/auditoria/auditoria-authentication/)
+- [Auditoria Domain Security](https://apis.io/security/auditoria/auditoria-domain-security/)
+- [Auditoria Trust Center](https://apis.io/security/auditoria/auditoria-trust-center/)
+- [Auditoria Vulnerability Disclosure](https://apis.io/security/auditoria/auditoria-vulnerability-disclosure/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Auditoria Scopes](https://apis.io/scopes/auditoria/auditoria-scopes/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.auditoria.ai/)
+- [Documentation](https://docs.auditoria.ai/hc/en-us)
+- [Support](https://www.auditoria.ai/contact-us/)
+- [Changelog](https://docs.auditoria.ai/hc/en-us/categories/360005816333-Auditoria-AI-Release-Notes)
+- [Blog](https://blog.auditoria.ai/)
+- [Security](https://www.auditoria.ai/trust/)
+- [Compliance](https://www.auditoria.ai/trust/)
+- [Terms of service](https://www.auditoria.ai/terms-of-use/)
+- [Privacy policy](https://www.auditoria.ai/privacy-policy/)
+- [GitHub](https://github.com/auditoria-ai)
+- [Status](https://status.auditoria.ai/)
+
+## API Evangelist rating
+
+**Kin Score 31.9** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 44.7 |
+| Developer ergonomics | 28.6 |
+| Access clarity | 43.4 |
+
+**Agent readiness 15.1** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+
+**Regulatory alignment 41.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/auditoria/](https://apis.io/providers/auditoria/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Auditoria.AI: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/auditoria/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
